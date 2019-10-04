@@ -7,4 +7,17 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(tidyverse)
+library(fivethirtyeight)
 ```
+
+```{r data}
+elections <- read.csv("https://raw.githubusercontent.com/zonination/election-history/master/elec.csv")
+```
+
+As of now, I have the election data from the git hub link included above. It is a collection of election data from the earliest elections. I am not sure if I need to move it to my raw-data file or not, since I can download it directly from the web to my RMarkdown file. If I do, please let me know! Georgie found the data set for me from a github repo with links to a bunch of cool political data sets. So far, I have only loaded it in using read.csv.
+
+I will need data on state populations over time, dating back to the late 1700s, but I am having trouble finding such data. I can find a table on wikipedia, but when I go to the linked source, I cannot find the information (and, I do not want to rely on Wikipedia). In the worst case scenario, I can create my own dataset (either using this wikipedia data, or possibly using exponential regressions to model populations -- but I really would rather not do this second option). Then,I could read in the excel spreadsheet to raw-data and use read_xlsx().
+
+I have also included the fivethirtyeight library because I anticipate that they will have a vast dataset that will probably be of use to me, although I will need to do further digging to see what possible sets I could use.
