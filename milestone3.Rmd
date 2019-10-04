@@ -12,12 +12,12 @@ library(tidyverse)
 library(fivethirtyeight)
 ```
 
-```{r data}
-elections <- read.csv("https://raw.githubusercontent.com/zonination/election-history/master/elec.csv")
+```{r election data}
+elections <- read.csv("raw-data/elec.csv")
 ```
 
-```{r}
-population <- read.csv("https://raw.githubusercontent.com/ropensci/historydata/master/data-raw/nhgis0011_ts_state.csv")
+```{r population data}
+population <- read.csv("raw-data/nhgis0011_ts_state.csv")
 ```
 
 As of now, I have the election data from the git hub link included above. It is a collection of election data from the earliest elections. I am not sure if I need to move it to my raw-data file or not, since I can download it directly from the web to my RMarkdown file. If I do, please let me know! Georgie found the data set for me from a github repo with links to a bunch of cool political data sets. So far, I have only loaded it in using read.csv.
